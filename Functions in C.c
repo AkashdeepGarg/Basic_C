@@ -3,32 +3,24 @@
 Add `int max_of_four(int a, int b, int c, int d)` here.
 */
 int max_of_four(int a, int b, int c, int d){
-    int max1=0, max2=0;
-    if(a>=b){
-        max1 = a;
+    int sum1=a+b, sum2=c+d;
+    if(sum1>=sum2){
+        if(a>=b)
+        return a;
+        else
+        return b;
     }
     else{
-        max1 = b;
-    }
-    if(c>=d){
-        max1=c;
-    }
-    else {
-    max2=d;
-    }
-    if(max1>=max2){
-        return max1;
-    }
-    else{
-        return max2;
+        if(c>=d)
+        return c;
+        else
+        return d;
     }
 }
-
 int main() {
     int a, b, c, d;
     scanf("%d %d %d %d", &a, &b, &c, &d);
     int ans = max_of_four(a, b, c, d);
     printf("%d", ans);
-    
     return 0;
 }
